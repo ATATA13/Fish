@@ -1,0 +1,64 @@
+﻿<Window x:Class="FnS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FnS"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="FnS" Height="759" Width="1296" ResizeMode="CanMinimize">
+
+    <!--<Window.DataContext>
+        <local:MainViewModel/>
+    </Window.DataContext>-->
+
+    <Grid>
+
+        <Grid x:Name="Menu" Visibility="Visible">
+            <Grid.Background>
+                <ImageBrush ImageSource="1488/oboi.jpg" AlignmentX="Center" Stretch="Fill"></ImageBrush>
+            </Grid.Background>
+            <Label Content="Count of fish 1" Foreground="#B8E2E1" HorizontalAlignment="Left" Margin="520,323,0,0" VerticalAlignment="Top" Width="236" Height="34">
+                <Label.Background>
+                    <ImageBrush ImageSource="1488/oboi.jpg" AlignmentX="Center" Stretch="Fill"></ImageBrush>
+                </Label.Background>
+            </Label>
+            <Label Content="Count of fish 2" Foreground="#B8E2E1" HorizontalAlignment="Left" Margin="520,357,0,0" VerticalAlignment="Top" Width="236" Height="34">
+                <Label.Background>
+                    <ImageBrush ImageSource="1488/oboi.jpg" AlignmentX="Center" Stretch="Fill"></ImageBrush>
+                </Label.Background>
+            </Label>
+            <Label Content="Count of seaweed" Foreground="#B8E2E1" HorizontalAlignment="Left" Margin="520,391,0,0" VerticalAlignment="Top" Width="236" Height="34">
+                <Label.Background>
+                    <ImageBrush ImageSource="1488/oboi.jpg" AlignmentX="Left" Stretch="Fill"></ImageBrush>
+                </Label.Background>
+            </Label>
+            <TextBox x:Name="countOfFish" HorizontalAlignment="Left" Margin="660,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" TextChanged="CountOfFish_TextChanged"/>
+            <TextBox x:Name="countOfFish2" HorizontalAlignment="Left" Margin="660,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" TextChanged="countOfFish2_TextChanged"/>
+            <TextBox x:Name="countOfSeaweed" HorizontalAlignment="Left" Margin="661,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" TextChanged="countOfSeaweed_TextChanged"/>
+            <Button x:Name="GenerateBt" Foreground="#B8E2E1" Content="Generate" HorizontalAlignment="Left" Margin="520,434,0,0" VerticalAlignment="Top" Width="236" Click="GenerateBt_Click" Height="34">
+                <Button.Background>
+                    <ImageBrush  ImageSource="1488/oboi.jpg" AlignmentX="Left" Stretch="Fill"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="DrawBt" Content="Draw" HorizontalAlignment="Left" Margin="602,473,0,0" VerticalAlignment="Top" Width="76" Click="DrawBt_Click"/>
+
+        </Grid>
+
+        <Grid x:Name="MainSpace" Visibility="Hidden">
+            <Canvas x:Name="Scene" HorizontalAlignment="Left" Height="720" VerticalAlignment="Top" Width="1280" />
+            <Grid.Background>
+                <ImageBrush ImageSource="1488/oboi.jpg" AlignmentX="Center" Stretch="Fill"></ImageBrush>
+            </Grid.Background>
+        </Grid>
+        
+        <Grid x:Name="Stat" Visibility="Hidden">
+            <oxy:Plot Title="{Binding Title}" Margin="24,0,10,48">
+                <oxy:Plot.Series>
+                    <oxy:LineSeries ItemsSource="{Binding YellowFish}"/>
+                    <oxy:LineSeries ItemsSource="{Binding PurpleFish}"/>
+                </oxy:Plot.Series>
+            </oxy:Plot>
+        </Grid>
+    </Grid>
+</Window>

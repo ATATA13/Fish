@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FnS", "FnS.csproj", "{EDA3D24A-3B65-4608-B61A-B1DA4FD13494}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Рисунки", "Рисунки", "{D2804FA4-298E-4DE7-880A-A0E8B3B8834C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDA3D24A-3B65-4608-B61A-B1DA4FD13494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDA3D24A-3B65-4608-B61A-B1DA4FD13494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDA3D24A-3B65-4608-B61A-B1DA4FD13494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDA3D24A-3B65-4608-B61A-B1DA4FD13494}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71215F8D-E2E7-45C2-A0C6-E66438877E31}
+	EndGlobalSection
+EndGlobal
